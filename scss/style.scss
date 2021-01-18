@@ -1,0 +1,545 @@
+@font-face {
+    font-family: Saját;
+    src: url("../font/BioRhyme-Light.ttf");
+}
+
+@font-face {
+    font-family: Main;
+    src: url("../font/Ovo-Regular.otf");
+}
+
+@import "valtozok";
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $betumeret;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: $foSzin;
+}
+
+.navbar {
+    width: 100vw;
+    height: auto;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background: rgba(50, 50, 94, 0.6);
+    &-brand {
+        letter-spacing: 1.2px;
+        color: $betuSzin2;
+        font-family: $betutipus2;
+        font-size: 2rem;
+    }
+    &-toggler {
+        border: 1px solid $betuSzin2;
+    }
+    &-icon {
+        background-color: $arnyek;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    &-nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-link {
+        letter-spacing: 1.2px;
+        color: $betuSzin2;
+        font-family: $betutipus2;
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+    .nav-link:hover,
+    &-brand:hover {
+        color: rgb(180, 180, 233);
+        text-shadow: 2px 1px 1px black;
+    }
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+.container {
+    padding-bottom: 3rem;
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: $betuSzin2;
+    font-family: $betutipus1;
+    font-size: 1.3rem;
+    border: 1px solid $betuSzin1;
+    @include arnyek(containerColor);
+    background: $containerColor;
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto;
+        padding: 1rem 0;
+        justify-content: center;
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            font-family: $betutipus2;
+            text-shadow: 2px 1px 1px black;
+        }
+    }
+    .brand-img {
+        width: 80vw;
+        padding: 0;
+        height: auto;
+        margin-top: 1rem;
+    }
+}
+
+.containt {
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        padding: 1rem;
+        text-align: center;
+        font-family: $betutipus2;
+        font-size: 2rem;
+        text-shadow: 2px 1px 1px black;
+    }
+    aside {
+        display: grid;
+        grid-template-rows: auto;
+        justify-content: center;
+        p {
+            letter-spacing: 1.1px;
+            text-shadow: 2px 1px 1px black;
+            padding: 1rem;
+        }
+        .cake-img {
+            width: 80vw;
+            height: auto;
+        }
+    }
+}
+
+.container2 {
+    margin: 2rem auto;
+    padding: 0;
+    width: 80vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    color: $betuSzin2;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        padding: 1rem;
+        text-align: center;
+        font-family: $betutipus2;
+        font-size: 2.5rem;
+        text-shadow: 2px 1px 1px black;
+    }
+    .box1,
+    .box2,
+    .box3 {
+        background: linear-gradient($containerColor), rgb(133, 92, 180);
+        margin: 2rem 0;
+        width: 75vw;
+        height: 75vw;
+        border: 1px solid $arnyek;
+        @include arnyek(containerColor);
+        .box-szoveg {
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            text-align: center;
+            letter-spacing: 1.3px;
+            font-family: $betutipus1;
+            color: $betuSzin2;
+            text-shadow: 2px 1px 1px black;
+            h3 {
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: $arnyek;
+    color: $betuSzin2;
+    text-shadow: 2px 1px 1px black;
+    font-size: 1.3rem;
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 80vw;
+        padding-top: 1rem;
+        h3 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-family: Main;
+        }
+        label {
+            font-family: $betutipus1;
+            letter-spacing: 1.2px;
+        }
+        .form-control {
+            margin-bottom: 1rem;
+            width: 65vw;
+        }
+        .form-control:hover {
+            outline: 1px solid $containerColor;
+        }
+        .btn {
+            font-family: $betutipus1;
+            width: auto;
+            margin: 2rem 0;
+            border: 2px solid $containerColor;
+            background-color: $arnyek;
+            box-shadow: 4px 4px 2px $containerColor;
+            color: $betuSzin1;
+            text-shadow: 2px 1px 1px $betuSzin2;
+            padding: .5rem 1rem;
+            letter-spacing: 1.1px;
+        }
+        .btn:hover {
+            border: 2px solid $betuSzin1;
+            background: linear-gradient($containerColor), $arnyek;
+            box-shadow: -4px -4px 2px $containerColor;
+            color: $betuSzin2;
+            text-shadow: 1px 1px 1px $betuSzin1;
+        }
+    }
+    .copyright {
+        font-size: 1rem;
+    }
+}
+
+
+/***Eszközök oldal***/
+
+.container {
+    .btn {
+        font-family: $betutipus2;
+        width: auto;
+        margin: 2rem 0;
+        border: 2px solid $containerColor;
+        background-color: rgba(145, 166, 145, 1);
+        box-shadow: 4px 4px 2px $containerColor;
+        color: $betuSzin1;
+        text-shadow: 2px 1px 0px $betuSzin2;
+        font-weight: bold;
+        padding: .5rem 1rem;
+        letter-spacing: 1.1px;
+    }
+    .btn:hover {
+        border: 2px solid $betuSzin1;
+        background: linear-gradient($containerColor), rgba(145, 166, 145, 1);
+        box-shadow: -4px -4px 2px $containerColor;
+        color: $betuSzin2;
+        text-shadow: 1px 1px 1px $betuSzin1;
+    }
+}
+
+.tools-footer {
+    margin-top: 6rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        .section1 {
+            justify-content: center;
+            text-align: center;
+            .brand-img {
+                width: 77.5vw;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        @include font-size($betumeret);
+    }
+    .navbar {
+        &-brand {
+            font-size: 1.3rem;
+        }
+        &-collapse {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .nav-link {
+            font-size: 1.1rem;
+        }
+    }
+    .container {
+        width: 70vw;
+        .section1 {
+            justify-content: center;
+            text-align: center;
+            .brand-img {
+                width: 70vw;
+            }
+        }
+    }
+    .containt {
+        width: 70vw;
+        aside {
+            justify-content: center;
+            text-align: left;
+            padding-bottom: 3rem;
+            .cake-img {
+                width: 70vw;
+            }
+            p {
+                padding: 2rem;
+            }
+        }
+    }
+    .container2 {
+        width: 60vw;
+        .box-group {
+            align-items: center;
+            justify-content: center;
+        }
+        .box1,
+        .box2,
+        .box3 {
+            width: 50vw;
+            height: 50vw;
+        }
+    }
+    footer {
+        .form {
+            width: 70vw;
+            .form-control {
+                width: 60vw;
+            }
+            .btn {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        position: fixed;
+        z-index: 1;
+    }
+    main {
+        margin-top: 7rem;
+        justify-content: space-evenly;
+    }
+    .container {
+        width: 60vw;
+        justify-content: center;
+        .section1 {
+            width: 60vw;
+            h1 {
+                font-size: 3rem;
+                text-align: center;
+                padding: 3rem;
+            }
+            .brand-img {
+                width: 60vw;
+                padding: 0;
+                height: auto;
+                margin-top: 1rem;
+            }
+        }
+        .containt {
+            width: 60vw;
+            justify-content: center;
+            h2 {
+                padding: 3rem;
+                font-size: 2.5rem;
+            }
+            aside {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                width: 60vw;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                p {
+                    letter-spacing: 1.1px;
+                    line-height: normal;
+                    text-align: left;
+                    padding: .5rem;
+                }
+                img {
+                    width: 30vw;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .container2 {
+        width: 100vw;
+        justify-content: space-evenly;
+        align-items: center;
+        h2 {
+            width: 100%;
+            text-align: center;
+            padding: 4rem;
+        }
+        .box-group {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 2rem;
+            justify-content: space-evenly;
+            padding-bottom: 3rem;
+            .box1,
+            .box2,
+            .box3 {
+                width: 30vw;
+                height: 35vw;
+                justify-content: space-around;
+            }
+        }
+    }
+    footer {
+        .form {
+            width: 60vw;
+            .form-control {
+                width: 55vw;
+            }
+        }
+        .copyright {
+            font-size: .8rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .navbar {
+        &-brand {
+            font-size: 2rem;
+        }
+        .nav-link {
+            font-size: 1.5rem;
+        }
+    }
+    .container {
+        width: 50vw;
+        .section1 {
+            width: 50vw;
+            .brand-img {
+                width: 50vw;
+            }
+        }
+        .containt {
+            width: 50vw;
+            aside {
+                width: 50vw;
+                justify-content: center;
+                align-items: center;
+                p {
+                    letter-spacing: 1.1px;
+                    text-shadow: 2px 2px 2px $containerColor;
+                    padding: 2rem 1rem;
+                    text-align: left;
+                }
+                img {
+                    width: 25vw;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .container2 {
+        width: 100vw;
+        height: auto;
+        .box-group {
+            .box1,
+            .box2,
+            .box3 {
+                width: 20vw;
+                height: 25vw;
+                .box-szoveg {
+                    font-size: 1rem;
+                    text-align: center;
+                    letter-spacing: 1.2px;
+                    h3 {
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        font-size: 1rem;
+        .form {
+            display: flex;
+            justify-content: space-between;
+            width: 70vw;
+            padding-top: 1rem;
+            h3 {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem 0 2rem 0;
+            }
+            label {
+                margin-left: 1rem;
+            }
+            .form-control {
+                margin-bottom: 1rem;
+                width: 32vw;
+                font-size: 1rem;
+            }
+            .btn {
+                display: block;
+                width: 100vw;
+                width: auto;
+                margin: 2rem auto;
+                border: 2px solid $containerColor;
+                box-shadow: 4px 4px 2px $containerColor;
+                font-weight: bold;
+            }
+        }
+        .copyright {
+            font-size: 1rem;
+        }
+    }
+}

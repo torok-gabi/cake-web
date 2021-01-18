@@ -1,0 +1,15 @@
+$foSzin: linear-gradient(7deg, rgba(213, 240, 222, 1) 0%, rgba(145, 166, 145, 1) 31%, rgba(179, 179, 211, 1) 62%, rgba(126, 123, 191, 1) 97%);
+$betuSzin1: rgb(68, 67, 67);
+$betuSzin2: rgb(236, 243, 236);
+$betutipus1: Saját;
+$betutipus2: Main;
+$betumeret: 14px;
+$arnyek: rgb(126, 123, 191);
+$containerColor: rgba(0, 0, 0, .4);
+@mixin arnyek($containerColor) {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .2), -10px -10px 10px rgba(0, 0, 0, .2);
+}
+
+@mixin font-size($betumeret) {
+    font-size: 17px;
+}
