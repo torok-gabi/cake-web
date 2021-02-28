@@ -41,7 +41,7 @@ body {
         letter-spacing: 1.2px;
         color: $betuSzin2;
         font-family: $betutipus2;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
     &-toggler {
         border: 1px solid $betuSzin2;
@@ -62,7 +62,7 @@ body {
         font-size: 1.3rem;
         text-decoration: none;
     }
-    .nav-link:hover,
+    &:hover,
     &-brand:hover {
         color: rgb(180, 180, 233);
         text-shadow: 2px 1px 1px black;
@@ -159,7 +159,7 @@ main {
     .box1,
     .box2,
     .box3 {
-        background: linear-gradient($containerColor), rgb(133, 92, 180);
+        background: linear-gradient(rgb(91, 58, 129), rgba(255, 255, 255, .8)), ;
         margin: 2rem 0;
         width: 75vw;
         height: 75vw;
@@ -177,8 +177,9 @@ main {
             text-align: center;
             letter-spacing: 1.3px;
             font-family: $betutipus1;
-            color: $betuSzin2;
-            text-shadow: 2px 1px 1px black;
+            color: black;
+            text-shadow: 2px 1px 1px $betuSzin2;
+            font-weight: bold;
             h3 {
                 padding: 1rem 0;
             }
